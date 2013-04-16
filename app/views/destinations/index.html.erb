@@ -9,8 +9,9 @@
   </tr> -->
 
 <% @destinations.each do |destination| %>
-  <tr>
+  
     <br><td><%= destination.name %></td></br>
+     <br><td><%= destination.image_url %></td></br>
     <td><%= link_to 'Show', destination %></td>
     <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
     <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
