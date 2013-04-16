@@ -1,12 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <h3><b>Name:</b></h3>
 
-<%= render "@destination" %>
+	<h1><%= @destination.name %></h1>
+	<img src="<%=@destination.image_url%>" %>
+	
   
 </p>
 
 
-<%= link_to 'Edit', edit_destination_path(@destination) %> |
-<%= link_to 'Back', destinations_path %>
+<h3><%= link_to 'Edit', edit_destination_path(@destination) %></h3>
+<h3><%= link_to 'Back', destinations_path %></h3>
+

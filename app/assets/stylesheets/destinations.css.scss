@@ -1,3 +1,28 @@
-// Place all the styles related to the Destinations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+	color: brown;
+    text-align: center;
+    font-size: 70px;
+    margin: 30px;
+
+    }
+
+.index {
+	text-align: center;
+	margin: 200px;
+	font-size: 20px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+    }
+
+h3 {
+	color: brown;
+    text-align: center;
+    font-size: 30px
+
+    }	
+
+body {background-image: url("http://catchthewinds.com/wp-content/uploads/2012/12/Giraffes-in-Tanzania.jpg");}

@@ -1,24 +1,24 @@
-   <h1>Listing destinations</h1>
+<div>
+  <h1>Great Destinations to Visit</h1>
+</div>
 
-<!-- <table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr> -->
+<div class = "index">
+    <% @destinations.each do |destination| %>
+        
+        <h2><%= destination.name %></h2>
+      
+      <tr>
+        <td><%= link_to 'Show', destination %></td>
+        <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
+        <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr><br>
 
-<% @destinations.each do |destination| %>
-  
-    <br><td><%= destination.name %></td></br>
-     <br><td><%= destination.image_url %></td></br>
-    <td><%= link_to 'Show', destination %></td>
-    <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
-    <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <% end %>
 
-<br />
 
-<%= link_to 'New Destination', new_destination_path %>
+
+        <h2><%= link_to 'New Destination', new_destination_path %></h2>
+</div>
+
+
+    
