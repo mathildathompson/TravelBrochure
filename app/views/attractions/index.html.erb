@@ -1,0 +1,22 @@
+<div>
+  <h1>Great Attractions to Visit</h1>
+</div>
+
+<div class = "index">
+    <% @attractions.each do |attraction| %>
+        
+        <h2><%= attraction.name %></h2>
+      
+      <tr>
+        <td><%= link_to 'Show', attraction %></td>
+        <td><%= link_to 'Edit', edit_attraction_path(attraction) %></td>
+        <td><%= link_to 'Destroy', attraction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr><br>
+
+    <% end %>
+
+
+
+        <h2><%= link_to 'New Attraction', new_attraction_path %></h2>
+</div>
+

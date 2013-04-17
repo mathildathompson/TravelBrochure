@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h3><b>Name:</b></h3>
+
+	<h1><%= @attraction.name %></h1>
+	<%= link_to "Map", "http://maps.google.com/?q=#{@attraction.latitude},#{@attraction.longitude}" %>
+
+	<img src="<%=@attraction.image_url%>" %>
+	
+  
+</p>
+
+
+<h3><%= link_to 'Edit', edit_destination_attraction_path(@attraction.destination_id, @attraction.id) %></h3>
+<h3><%= link_to 'Back', destination_path %></h3>

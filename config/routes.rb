@@ -1,8 +1,13 @@
 TravelApp::Application.routes.draw do
-  resources :attractions
+  
+  resources :destinations do
+    resources :attractions
+  end
+   # resources :destinations
+   # resources :attractions
 
+  #/destinations/:destination_id/attractions
 
-  resources :destinations
 
 
   # The priority is based upon order of creation:

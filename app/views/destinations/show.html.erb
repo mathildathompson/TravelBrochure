@@ -5,11 +5,16 @@
 
 	<h1><%= @destination.name %></h1>
 	<img src="<%=@destination.image_url%>" %>
-	
-  
 </p>
 
+<% @destination.attractions.each do |a| %>
+	<%= link_to a.name, destination_attraction_path(a.destination_id, a.id)%>
+
+<%= link_to 'new attraction', new_destination_attraction_path(a.destination.id) %>
+<%end%>
 
 <h3><%= link_to 'Edit', edit_destination_path(@destination) %></h3>
 <h3><%= link_to 'Back', destinations_path %></h3>
+
+
 

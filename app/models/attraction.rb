@@ -11,4 +11,8 @@ class Attraction < ActiveRecord::Base
   def destination_and_attraction
     "#{destination.name} #{self.name}"
   end
+
 end
+
+
+  
