@@ -25,8 +25,9 @@ class AttractionsController < ApplicationController
   # GET /attractions/new.json
   def new
     @attraction = Attraction.new
+    @attraction.destination = Destination.find(params[:destination_id])
 
-    respond_to do |format|
+      respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @attraction }
     end
@@ -44,7 +45,7 @@ class AttractionsController < ApplicationController
 
     respond_to do |format|
       if @attraction.save
-        format.html { redirect_to @attraction, notice: 'Attraction was successfully created.' }
+        format.html { redirect_to destination_path(@attraction.destination), notice: 'Attraction was successfully created.' }
         format.json { render json: @attraction, status: :created, location: @attraction }
       else
         format.html { render action: "new" }
